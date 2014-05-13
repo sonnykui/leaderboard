@@ -1,0 +1,4 @@
+leaderboard
+===========
+
+Meteor leaderboard example
