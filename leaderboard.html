@@ -10,9 +10,6 @@
 
 <template name="leaderboard">
 
-  <div class="controller">
-    <button id="sort">by {{sort_order}}</button>
-  </div>
 
   <div class="leaderboard">
     {{#each players}}
@@ -20,7 +17,15 @@
     {{/each}}
   </div>
 
-  {{#if selected_name}}
+  <div>
+    <button id="sort">by {{sort_order}}</button>
+  </div>
+
+  <div>
+    <button id="reset">reset scores</button>
+  </div>
+  
+{{#if selected_name}}
   <div class="details">
     <div class="name">{{selected_name}}</div>
     <input type="button" class="inc" value="Give 5 points" />

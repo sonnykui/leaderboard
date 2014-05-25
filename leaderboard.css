@@ -20,6 +20,10 @@ body {
     margin: 0 auto;
 }
 
+#reset {
+    with: 600px;
+    margin: 0 auto;
+}
 .player {
     cursor: pointer;
     padding: 5px;

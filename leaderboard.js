@@ -36,6 +36,16 @@ if (Meteor.isClient) {
  
     'click #sort': function () { 
       Session.set("is_name_order", !Session.get("is_name_order"));
+    },
+
+    'click #reset': function () {
+      
+      Players.find().forEach( function(player) {
+        console.log(player.name);
+        console.log(player.score);
+        var score = Math.floor(Random.fraction()*10)*5;
+        Players.update(player._id, {$set: {score: score}});
+      });
     }
   });
   
