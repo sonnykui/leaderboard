@@ -24,6 +24,11 @@
   <div>
     <button id="reset">reset scores</button>
   </div>
+
+  <div>
+    <button id="add">Add</button>
+    <input type="text" class="new-player" value="" />
+  </div>
   
 {{#if selected_name}}
   <div class="details">
@@ -37,6 +42,7 @@
 
 <template name="player">
   <div class="player {{selected}}">
+    <button id="remove">Remove</button>
     <span class="name">{{name}}</span>
     <span class="score">{{score}}</span>
   </div>

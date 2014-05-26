@@ -41,17 +41,29 @@ if (Meteor.isClient) {
     'click #reset': function () {
       
       Players.find().forEach( function(player) {
-        console.log(player.name);
-        console.log(player.score);
+        //console.log(player.name);
+        //console.log(player.score);
         var score = Math.floor(Random.fraction()*10)*5;
         Players.update(player._id, {$set: {score: score}});
       });
+    },
+
+    'click #add': function (event, template) {
+      var player = template.find('input.new-player');
+      var name = $.trim(player.value)
+      if (name.length) {
+        Players.insert({name: name, score: Math.floor(Random.fraction()*10)*5});
+        player.value = '';
+      }
     }
   });
   
   Template.player.events({
     'click': function () {
       Session.set("selected_player", this._id);
+    },
+    'click #remove': function () {
+      Players.remove(this._id);
     }
   });
 }
