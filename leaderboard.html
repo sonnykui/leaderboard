@@ -4,6 +4,11 @@
 
 <body>
   <div id="outer">
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Sort</button>
+        <button type="button" class="btn btn-warning">Remove</button>
+        <button type="button" class="btn btn-danger">Reset</button>
+    </div>
     {{> leaderboard}}
   </div>
 </body>
@@ -42,9 +47,13 @@
 
 <template name="player">
   <div class="player {{selected}}">
-    <button id="remove">Remove</button>
-    <span class="name">{{name}}</span>
-    <span class="score">{{score}}</span>
+    <div class="list-group">
+      <a href="#" class="list-group-item">
+        <button id="remove">Remove</button>
+        <span class="name">{{name}}</span>
+        <span class="score badge">{{score}}</span>
+      </a>
+    </div>
   </div>
 </template>
 

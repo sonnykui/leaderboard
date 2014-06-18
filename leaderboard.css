@@ -15,6 +15,10 @@ body {
     margin: 0 auto;
 }
 
+.btn-group {
+    margin: 20px;
+}
+
 #sort {
     width: 600px;
     margin: 0 auto;
@@ -37,15 +41,15 @@ body {
 
 .player .score {
     display: inline-block;
-    width: 100px;
-    text-align: right;
+    width: 60px;
+    text-align: center;
     font-size: 2em;
     font-weight: bold;
-    color: #777;
+    color: #ffffff;
 }
 
 .player.selected {
-    background-color: yellow;
+    //color: red;
 }
 
 .player.selected .score {
